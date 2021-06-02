@@ -1,0 +1,14 @@
+.container .btn-align {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.container h1 {
+    font-family: var(--title-font);
+    font-size: 2rem;
+}
+
+.close {
+    background-color: transparent;
+    border: none;
+}

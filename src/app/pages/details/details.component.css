@@ -1,0 +1,43 @@
+#details {
+    display: grid;
+    grid-template-areas: 
+    "name description"
+    "type description"
+    ;
+}
+
+#details .card {
+    padding: 2rem;
+    margin: .3rem;
+    border-radius: 20px;
+
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+#details .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+#details .card:nth-child(1) {
+    grid-area: name;
+}
+
+#details .card:nth-child(2) {
+    grid-area: type;
+}
+
+#details .card:nth-child(3) {
+    grid-area: description;
+}
+
+@media (max-width: 800px) {
+    #details {
+        grid-template-areas: 
+        "name"
+        "type"
+        "description"
+        ;
+    }
+}
+

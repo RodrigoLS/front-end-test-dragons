@@ -1,1 +1,43 @@
 /* You can add global styles to this file, and also import other style files */
+
+:root {
+    --primary-color: #d30000;
+    --btn-color: #d30000;
+    --btn-hover-color: #b90000;
+    --btn-font-color: #FFFFFF;
+
+    --title-font: 'Create Round';
+    --paragraph-font: 'Merriweather';
+    --btn-font: 'Noto Sans';
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: var(--paragraph-font);
+}
+
+.container {
+    margin-top: 3rem;
+    max-width: 900px;
+}
+
+button, input[type=submit] {
+    font-family: var(--btn-font);
+    background-color: var(--btn-color) !important;
+    color: var(--btn-font-color) !important;
+}
+
+button:hover, input[type=submit]:hover {
+    background-color: var(--btn-hover-color) !important;
+}
+
+.create-icon {
+    color: #4d4d4d;
+}
+
+.delete-icon {
+    color: #d30000;
+}

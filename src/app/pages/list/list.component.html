@@ -1,0 +1,53 @@
+<section class="container">
+    <h1>Dragões</h1>
+
+    <div class="btn-align">
+        <button class="btn" [routerLink]="['/create']" routerLinkActive="router-link-active">Novo</button>
+    </div>
+
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th scope="col">Nome</th>
+                <th scope="col">Tipo</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let dragon of dragons | sort:'name'; let i = index">
+                <td scope="row" [routerLink]="['/details', dragon.id]">{{dragon.name}}</td>
+                <td>{{dragon.type}}</td>
+                <td>
+                    <span class="material-icons create-icon" [routerLink]="['/edit', dragon.id]">
+                        edit
+                    </span>
+                    <span class="material-icons delete-icon" (click)="showModalRemoveDragon(dragon.id)">
+                        delete
+                    </span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<!-- Modal -->
+<div class="modal fade" id="removeDragonModal" tabindex="-1" role="dialog" aria-labelledby="removeDragonModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="removeDragonModalLabel">Remover Dragão</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="closeModalRemoveDragon()">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Realmente deseja remover esse dragão?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="closeModalRemoveDragon()">Não</button>
+                <button type="button" class="btn btn-primary" (click)="removeDragon()">Sim</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,14 @@
+form .form-group {
+    margin-bottom: 1rem;
+}
+
+form .btn-align-right {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.container h1 {
+    font-family: var(--title-font);
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
